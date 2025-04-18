@@ -1,4 +1,4 @@
-# Portfolio Website
+# Portfolio Website Github.io
 
 A modern, responsive personal portfolio website for Çağlar Sarıkaya, built with React, TypeScript, and Vite.
 
@@ -76,7 +76,7 @@ The project follows best practices for React security and includes proper handli
 
 ## 📄 License
 
-[Add your license information here]
+Open
 
 ---
 
