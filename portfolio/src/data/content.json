@@ -1,0 +1,54 @@
+{
+  "youtubeVideos": [
+    {
+      "id": "mcCIym5CuFQ",
+      "isShort": true,
+      "title": "How to Use Cursor AI Effectively for Coding Projects",
+      "description": "My seven techniques for using Cursor AI effectively for coding projects",
+      "thumbnail": "https://i3.ytimg.com/vi/mcCIym5CuFQ/maxresdefault.jpg",
+      "publishedAt": "2025-04-16",
+      "url": "https://www.youtube.com/shorts/mcCIym5CuFQ"
+    },
+    {
+      "id": "2WWE4o4kJLM",
+      "isShort": false,
+      "title": "Page Tester in .NET 9 – Build a Website Response Checker with Cursor AI",
+      "description": "Learn how to build a page testing tool that checks website response times using .NET 9",
+      "thumbnail": "https://i3.ytimg.com/vi/2WWE4o4kJLM/maxresdefault.jpg",
+      "publishedAt": "2025-04-15",
+      "url": "https://www.youtube.com/watch?v=2WWE4o4kJLM"
+    },
+    {
+      "id": "b37avrEtpz0",
+      "isShort": false,
+      "title": "AI Showdown: Claude 3.5 vs GPT-4 vs DeepSeek R1 vs Copilot | Fullstack .NET 9 App Built in Minutes!",
+      "description": "I compare the performance of Claude 3.5, GPT-4, DeepSeek R1, and Copilot in a clean architecture .NET 9 web api built in minutes!",
+      "thumbnail": "https://i3.ytimg.com/vi/b37avrEtpz0/maxresdefault.jpg",
+      "publishedAt": "2024-01-14",
+      "url": "https://www.youtube.com/watch?v=b37avrEtpz0"
+    }
+  ], 
+  "mediumBlogs": [
+    {
+      "id": 1,
+      "title": "What is IEnumerable, ICollection, IList, and IQueryable",
+      "description": "Understand the key differences between IQueryable and in-memory collections like IEnumerable, ICollection, and IList in C#.",
+      "publishedAt": "2021-12-27",
+      "url": "https://medium.com/c-sharp-programming/what-is-ienumerable-icollection-ilist-and-iqueryable-e78bf74cfd5f"
+    },
+    {
+      "id": 2,
+      "title": "How C# Convert Works Behind the Scenes: Types, IConvertible, and Culture-Specific Parsing",
+      "description": "Explore how C#’s Convert class handles type conversion using IConvertible, manages overflows, and respects culture settings when parsing values like strings to numbers.",
+      "publishedAt": "2022-04-25",
+      "url": "https://caglarcansarikaya.medium.com/c-convert-class-fa8607561f57"
+    },
+    {
+      "id": 3,
+      "title": "How to Remember Dependency Injection in .NET Using Mnemonics",
+      "description": "Learn the basics of Dependency Injection in .NET and how to remember its key concepts using simple mnemonics. This guide breaks down DI types like Singleton with easy-to-remember analogies to make the pattern stick. Perfect for beginners and anyone who wants a quick mental shortcut.",
+      "publishedAt": "2024-11-29",
+      "url": "https://caglarcansarikaya.medium.com/how-to-remember-dependency-injection-in-net-using-mnemonics-32f8c530b03c"
+    }
+  ]
+} 
