@@ -1,33 +1,17 @@
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import './ProjectsSection.css';
+import content from '../../data/content.json';
 
 const ProjectsSection = () => {
-  // Sample project data - can be replaced with actual projects
-  const projects = [
-    {
-      id: 1,
-      title: 'Web Page Tester',
-      description: 'A powerful and efficient ai builded web page testing tool that analyzes website response times and detects errors. This tool helps website administrators and developers identify performance bottlenecks and problematic URLs across their websites.',
-      tech: ['C#', '.NET'],
-      github: 'https://github.com/caglarsarikaya/PageTester',
-    },
-    {
-      id: 2,
-      title: 'Tightrope Walker Game',
-      description: 'The Tightrope Walker Game is a browser-based 3D game implemented using JavaScript and WebGL via the Three.js library. The game features a character who must traverse a tightrope stretched between two mountains while maintaining balance.',
-      tech: ['JavaScript', 'HTML', 'CSS', 'React', 'Three.js', 'Vite.js'],
-      github: 'https://github.com/caglarsarikaya/TightropeWalker',
-      demoLink: 'https://caglarsarikaya.github.io/TightropeWalker/'
-    }
-  ];
+  const { projects } = content;
 
   return (
     <section className="projects" id="projects">
       <div className="container">
-        <h2 className="section-title">My Projects</h2>
+        <h2 className="section-title">{projects.title}</h2>
         
         <div className="projects-grid">
-          {projects.map(project => (
+          {projects.items.map(project => (
             <div className="project-card" key={project.id}>
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>

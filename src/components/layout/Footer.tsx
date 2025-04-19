@@ -1,40 +1,52 @@
+import React from 'react';
 import { FaGithub, FaLinkedin, FaYoutube, FaMedium, FaEnvelope } from 'react-icons/fa';
 import './Footer.css';
+import content from '../../data/content.json';
 
 const Footer = () => {
+  const { footer } = content;
+  
+  // Map icon names to components
+  const iconMap: Record<string, React.ReactNode> = {
+    FaGithub: <FaGithub />,
+    FaLinkedin: <FaLinkedin />,
+    FaYoutube: <FaYoutube />,
+    FaMedium: <FaMedium />
+  };
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
           <div className="contact-info">
-            <h3>Contact</h3>
+            <h3>{footer.contact.title}</h3>
             <div className="contact-item">
               <FaEnvelope className="contact-icon" />
-              <a href="mailto:caglarcansarikaya@gmail.com">caglarcansarikaya@gmail.com</a>
+              <a href={`mailto:${footer.contact.email}`}>{footer.contact.email}</a>
             </div>
           </div>
           
           <div className="social-container">
-            <h3>Connect</h3>
+            <h3>{footer.social.title}</h3>
             <div className="social-links">
-              <a href="https://github.com/caglarsarikaya" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-btn">
-                <FaGithub />
-              </a>
-              <a href="https://linkedin.com/in/caglarcansarikaya" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-btn">
-                <FaLinkedin />
-              </a>
-              <a href="https://youtube.com/@caglarcansarikaya" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="social-btn">
-                <FaYoutube />
-              </a>
-              <a href="https://caglarcansarikaya.medium.com" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="social-btn">
-                <FaMedium />
-              </a>
+              {footer.social.links.map((link, index) => (
+                <a 
+                  key={index}
+                  href={link.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label={link.platform} 
+                  className="social-btn"
+                >
+                  {iconMap[link.icon]}
+                </a>
+              ))}
             </div>
           </div>
         </div>
         
         <div className="copyright">
-          <p>&copy; {new Date().getFullYear()} Caglar Sarikaya. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {footer.copyright}</p>
         </div>
       </div>
     </footer>

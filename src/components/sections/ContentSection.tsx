@@ -26,8 +26,9 @@ const ContentSection = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   
   // Load data from our JSON file
-  const videos = contentData.youtubeVideos as VideoContent[];
-  const articles = contentData.mediumBlogs as BlogContent[];
+  const { content, youtubeVideos, mediumBlogs } = contentData;
+  const videos = youtubeVideos as VideoContent[];
+  const articles = mediumBlogs as BlogContent[];
   
   // Format the date string to a more readable format
   const formatDate = (dateString: string) => {
@@ -53,7 +54,7 @@ const ContentSection = () => {
   return (
     <section className="content" id="content">
       <div className="container">
-        <h2 className="section-title">Content & Media</h2>
+        <h2 className="section-title">{content.title}</h2>
         
         <div className="content-tabs">
           <button 
@@ -115,7 +116,7 @@ const ContentSection = () => {
                     </div>
                   ))}
                   <div className="channel-link">
-                    <a href="https://youtube.com/@caglarcansarikaya" target="_blank" rel="noopener noreferrer">
+                    <a href={content.youtubeChannelUrl} target="_blank" rel="noopener noreferrer">
                       Visit my YouTube Channel
                     </a>
                   </div>
@@ -141,7 +142,7 @@ const ContentSection = () => {
                     </div>
                   ))}
                   <div className="profile-link">
-                    <a href="https://caglarcansarikaya.medium.com" target="_blank" rel="noopener noreferrer">
+                    <a href={content.mediumProfileUrl} target="_blank" rel="noopener noreferrer">
                       See all blogs on Medium
                     </a>
                   </div>
